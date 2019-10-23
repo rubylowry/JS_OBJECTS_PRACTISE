@@ -10,7 +10,7 @@ var cheese = [
     country: "Ireland",
     milk: "cow",
     texture: "Semi-soft",
-    flavour: "salty",
+    flavour: "Salty",
     lactose: true,
     vegan: false,
     vegetarian: true,
