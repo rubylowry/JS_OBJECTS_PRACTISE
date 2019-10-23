@@ -22,7 +22,7 @@ var cheese = [
     price: 8,
     country: "Italy",
     milk: "cow",
-    texture: "pasta-filata",
+    texture: "Pasta-filata",
     flavour: "Mild",
     lactose: true,
     vegan: false,
@@ -35,8 +35,8 @@ var cheese = [
     price: 10,
     country: "England",
     milk: "cow",
-    texture: "semi-hard",
-    flavour: "sharp",
+    texture: "Semi-hard",
+    flavour: "Sharp",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -48,8 +48,8 @@ var cheese = [
     price: 9,
     country: "Switzerland",
     milk: "cow",
-    texture: "semi-hard",
-    flavour: "savory",
+    texture: "Semi-hard",
+    flavour: "Savory",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -74,8 +74,8 @@ var cheese = [
     price: 14,
     country: "France",
     milk: "cow",
-    texture: "soft-ripened",
-    flavour: "buttery",
+    texture: "Soft-ripened",
+    flavour: "Buttery",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -87,8 +87,8 @@ var cheese = [
     price: 14,
     country: "Italy",
     milk: "cow",
-    texture: "soft-unripened",
-    flavour: "milky",
+    texture: "Soft-unripened",
+    flavour: "Milky",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -100,8 +100,8 @@ var cheese = [
     price: 8,
     country: "Italy",
     milk: "cow",
-    texture: "fresh-cheese",
-    flavour: "sweet",
+    texture: "Fresh-cheese",
+    flavour: "Sweet",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -113,8 +113,8 @@ var cheese = [
     price: 17,
     country: "France",
     milk: "cow",
-    flavour: "sweet",
-    texture: "soft-ripened",
+    flavour: "Sweet",
+    texture: "Soft-ripened",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -126,8 +126,8 @@ var cheese = [
     price: 16,
     country: "France",
     milk: "goat",
-    flavour: "buttery",
-    texture: "fresh-cheese",
+    flavour: "Buttery",
+    texture: "Fresh cheese",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -139,9 +139,9 @@ var cheese = [
     price: 13,
     country: "Germany",
     milk: "cow",
-    flavour: "savory",
+    flavour: "Savory",
     lactose: true,
-    texture: "soft-ripened",
+    texture: "Soft-ripened",
     vegan: false,
     vegetarian: true,
     photo: "img/cambozola.jpg"
@@ -179,7 +179,7 @@ var cheese = [
     country: "Spain",
     milk: "sheep",
     flavour: "sweet",
-    texture: "",
+    texture: "Hard cheese",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -191,8 +191,8 @@ var cheese = [
     price: 7,
     country: "Norway",
     milk: "cow",
-    flavour: "buttery",
-    texture: "semi-soft",
+    flavour: "Buttery",
+    texture: "Semi-soft",
     lactose: true,
     vegan: false,
     vegetarian: true,
@@ -211,19 +211,101 @@ document.getElementById('allCheese').addEventListener('click', function(){
 };
 })
 
+// This is my function that captures all the properties witin the object
+
 function allCheese(j){
 
  document.getElementById('cheese').innerHTML
- += '</br><h1 class="jumbotron text-danger">' + cheese[j].name + '</h1>'
+ += '</br><h1 class="jumbotron card-titled">' + cheese[j].name + '</h1>'
  + '<div class="row">'
  +'<div class="col">'
- + '<img class="img-thumbnail mt-5 myDogs" src="' + cheese[j].photo + ' "  alt="Cheese"/>'
+ + '<img class="card-img-top" src="' + cheese[j].photo + ' "  alt="Cheese" style="width:100%"/>'
  + '</div>'
  + '<div class="col">'
- + '</br></br> Breed : <h5 class="text-danger" >' + cheese[j].country + '</h5>'
- + '</br> Flavour: <h5 class="text-danger" > ' + cheese[j].flavour + '</h5>'
- + '</br> Texture: <h5 class="text-danger" >' + cheese[j].texture + '</h5>'
+ + '</br></br> Country : <h5 class="card-text" >' + cheese[j].country + '</h5>'
+ + '</br> Flavour: <h5 class="card-text" > ' + cheese[j].flavour + '</h5>'
+ + '</br> Texture: <h5 class="card-text" >' + cheese[j].texture + '</h5>'
  + '</div>'
- + '</div>';
-
+ + '</div>'
+ + '</br>'
+ + '</br>';
 }
+
+// This is where only cheese made with cow milk will show
+
+document.getElementById('cow').addEventListener('click', function(){
+  document.getElementById('cheese').innerHTML = " "; // to clear the container
+  for(var r = 0; r < cheese.length; r++) {
+    if (cheese[r].milk === "cow") {
+       allCheese(r);
+   }
+  }
+});
+
+// This is where only cheese made in Italy will show
+
+document.getElementById('italyCountry').addEventListener('click', function(){
+  document.getElementById('cheese').innerHTML = " "; // to clear the container
+  for(var r = 0; r < cheese.length; r++) {
+    if (cheese[r].country === "Italy") {
+       allCheese(r);
+   }
+  }
+});
+
+// This is where only cheese made in Italy will show
+
+document.getElementById('franceCountry').addEventListener('click', function(){
+  document.getElementById('cheese').innerHTML = " "; // to clear the container
+  for(var r = 0; r < cheese.length; r++) {
+    if (cheese[r].country === "France") {
+       allCheese(r);
+   }
+  }
+});
+
+// This is where only cheese made in Denmark will show
+
+document.getElementById('denmarkCountry').addEventListener('click', function(){
+  document.getElementById('cheese').innerHTML = " "; // to clear the container
+  for(var r = 0; r < cheese.length; r++) {
+    if (cheese[r].country === "Denmark") {
+       allCheese(r);
+   }
+  }
+});
+
+// The price of cheese is $13
+
+document.getElementById('price13').addEventListener('click', function(){
+  document.getElementById('cheese').innerHTML = " "; //to clear the container
+  for(var i = 0; i < cheese.length; i++) {
+    if (cheese[i].price === 13) {
+       allCheese(i);
+   }
+  }
+});
+
+// The price of cheese is $8
+
+document.getElementById('price8').addEventListener('click', function(){
+  document.getElementById('cheese').innerHTML = " "; //to clear the container
+  for(var i = 0; i < cheese.length; i++) {
+    if (cheese[i].price === 8) {
+       allCheese(i);
+   }
+  }
+});
+
+// The cheese contains lactose: true or false?
+
+document.getElementById('lactose').addEventListener('click',function(){
+  document.getElementById('cheese').innerHTML = " "; //to clear the container
+  for(var i = 0; i < cheese.length; i++) {
+if (cheese.lactose === true) {
+ allCheese(i);
+} else {
+ allCheese(i);
+   }
+  }
+});

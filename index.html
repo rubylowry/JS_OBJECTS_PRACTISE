@@ -8,13 +8,35 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 
     <title>Cheese</title>
   </head>
   <body>
-    <h1 class="display-4">Types Of Cheese</h1>
+    <div class="container">
+    <h1 class="display-2">Different Types of Cheese</h1>
+
+
+<!--buttons for all the different properties-->
          <button id="allCheese" type="button" class="btn btn-info">All cheese</button>
+         <button id="cow" type="button" class="btn btn-info">Cheese made with cows milk</button>
+         <button id="italyCountry" type="button" class="btn btn-info">Italy</button>
+         <button id="franceCountry" type="button" class="btn btn-info">France</button>
+         <button id="denmarkCountry" type="button" class="btn btn-info">Denmark</button>
+         <button id="price13" type="button" class="btn btn-info">$13</button>
+         <button id="price8" type="button" class="btn btn-info">$8</button>
+         <button id="lactose" type="button" class="btn btn-info">Cheese high in lactose</button>
+<div class="card" style="width:500px">
     <div id="cheese"></div>
+  </div>
+</div>
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
