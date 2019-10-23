@@ -79,7 +79,7 @@ var cheese = [
     lactose: true,
     vegan: false,
     vegetarian: true,
-    photo: "img/brie.jpg"
+    photo: "img/brie.png"
   },
   {
     name: "Mascarpone",
@@ -105,7 +105,7 @@ var cheese = [
     lactose: true,
     vegan: false,
     vegetarian: true,
-    photo: "img/mascarpone.jpg"
+    photo: "img/ricotta.jpg"
   },
   {
     name: "Camembert",
@@ -144,7 +144,7 @@ var cheese = [
     texture: "soft-ripened",
     vegan: false,
     vegetarian: true,
-    photo: "img/cambozala.jpg"
+    photo: "img/cambozola.jpg"
   },
   {
     name: "Havarti",
@@ -160,17 +160,17 @@ var cheese = [
     photo: "img/havarti.jpg"
   },
   {
-    name: "Cambozola",
-    id: "cambozola",
+    name: "Provolone",
+    id: "provolone",
     price: 13,
-    country: "Germany",
-    milk: "goat",
-    flavour: "savory",
-    texture: "",
+    country: "Italy",
+    milk: "cow",
+    flavour: "Milky",
+    texture: "Semi-hard",
     lactose: true,
     vegan: false,
     vegetarian: true,
-    photo: "img/cambozala.jpg"
+    photo: "img/provolone.jpg"
   },
   {
     name: "Manchego",
